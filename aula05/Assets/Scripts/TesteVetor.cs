@@ -22,7 +22,7 @@ public class TesteVetor : MonoBehaviour
         itens[5] = "";
         itens[6] = "";
         itens[7] = "";
-        itens[8] = "planta russo";
+        itens[8] = "planta red rose";
         itens[9] = "";
 
         Debug.Log("Meus itens: ");
@@ -32,6 +32,11 @@ public class TesteVetor : MonoBehaviour
         //Debug.Log(itens[2]);
         //Debug.Log(itens[3]);
         //Debug.Log(itens[4]);
+
+        foreach(string item in itens)
+        {
+            Debug.Log(item);
+        }
 
         for(int i = 0; i < itens.Length; i++)
         {
