@@ -7,6 +7,12 @@ public class ControlaLaser : MonoBehaviour
     public float velMax = 7f;
     private float limiteDolaser = 0.5f;
     private float duracaoDisparo = 1.2f;
+    public AudioClip somLaser;
+
+    private void Start()
+    {
+        ControlaAudio.Instancia.PlayOneShot(somLaser);
+    }
 
     void Update()
     {
