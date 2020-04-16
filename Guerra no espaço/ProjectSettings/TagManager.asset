@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Asteroide
   - NaveInimiga
-  - Laser
+  - LaserInimigo
+  - LaserJogador
   layers:
   - Default
   - TransparentFX

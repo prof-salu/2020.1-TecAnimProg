@@ -74,7 +74,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: 454c5ec02c51bb544a7252ef71570c81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 0.93, y: 0.84}
   m_AdaptiveModeThreshold: 0.5
@@ -142,3 +142,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   somNaveInimiga: {fileID: 8300000, guid: 14d4e66570723844b8737d9575a2415d, type: 3}
+  velRotacao: 90
+  velDeslocamento: 3
+  atrasoDisparo: 1
+  timerDisparo: 0
+  distanciaDoTiro: 4
+  laser: {fileID: 1810078229652504649, guid: bdc55ab9445a630478e0a93984a88c14, type: 3}

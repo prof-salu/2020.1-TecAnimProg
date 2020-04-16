@@ -7,6 +7,8 @@ public class ControlaJogador : MonoBehaviour
     public float velocidadeMax = 3.5f;
     public float velocidadeRot = 180;
     private float limiteDaNave = 0.5f;
+
+    public AudioClip somExplosao;
     void Update()
     {
         //Input --> entradas de dados
@@ -102,5 +104,15 @@ public class ControlaJogador : MonoBehaviour
 
         transform.position = posicao;
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("LaserInimigo") || collision.CompareTag("NaveInimiga"))
+        {
+            ControlaAudio.Instancia.PlayOneShot(somExplosao);
+            Destroy(this.gameObject);
+            Destroy(collision.gameObject);
+        }
     }
 }

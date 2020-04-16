@@ -346,6 +346,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroide
       objectReference: {fileID: 0}
+    - target: {fileID: 5139770076079941265, guid: cd11003c72f1abc41beaa10e0d2a686a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5139770076079941267, guid: cd11003c72f1abc41beaa10e0d2a686a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -418,12 +423,12 @@ PrefabInstance:
     - target: {fileID: 6265004423913666902, guid: 19e1b88780bd17646abd16b4d429215e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.92
+      value: -5.9
       objectReference: {fileID: 0}
     - target: {fileID: 6265004423913666902, guid: 19e1b88780bd17646abd16b4d429215e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.495
+      value: -2.34
       objectReference: {fileID: 0}
     - target: {fileID: 6265004423913666902, guid: 19e1b88780bd17646abd16b4d429215e,
         type: 3}
@@ -470,6 +475,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8808845164649247689, guid: 19e1b88780bd17646abd16b4d429215e,
+        type: 3}
+      propertyPath: laser
+      value: 
+      objectReference: {fileID: 1810078229652504649, guid: fc7f939c0093d2f4394add5ef3f1d972,
+        type: 3}
+    - target: {fileID: 8808845164649247689, guid: 19e1b88780bd17646abd16b4d429215e,
+        type: 3}
+      propertyPath: somExplosao
+      value: 
+      objectReference: {fileID: 8300000, guid: 14d4e66570723844b8737d9575a2415d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19e1b88780bd17646abd16b4d429215e, type: 3}
 --- !u!1001 &8233638247254540688
@@ -487,12 +503,12 @@ PrefabInstance:
     - target: {fileID: 8233638246726749389, guid: 2aa14b2c74fd14c4f94809379384aa93,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.39
+      value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 8233638246726749389, guid: 2aa14b2c74fd14c4f94809379384aa93,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.97
+      value: 3.15
       objectReference: {fileID: 0}
     - target: {fileID: 8233638246726749389, guid: 2aa14b2c74fd14c4f94809379384aa93,
         type: 3}
