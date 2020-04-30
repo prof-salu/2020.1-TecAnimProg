@@ -51,12 +51,13 @@ public class ControlaJogo : MonoBehaviour
     private IEnumerator Invencibilidade()
     {
         //rotinas
+        //Como o GameObject possui mais de um colisor, devemos desabilitar todos os colisores da Nave
         foreach(BoxCollider2D colisor in jogador.GetComponents<BoxCollider2D>())
         {
             colisor.enabled = false;
         }
         yield return new WaitForSeconds(2f);
-
+        //Como o GameObject possui mais de um colisor, devemos habilitar todos os colisores da Nave
         foreach (BoxCollider2D colisor in jogador.GetComponents<BoxCollider2D>())
         {
             colisor.enabled = true;
