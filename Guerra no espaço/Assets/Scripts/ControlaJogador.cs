@@ -108,7 +108,7 @@ public class ControlaJogador : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("LaserInimigo") || collision.CompareTag("NaveInimiga"))
+        if (collision.CompareTag("LaserInimigo") || collision.CompareTag("NaveInimiga") || collision.CompareTag("Asteroide"))
         {
             ControlaAudio.Instancia.PlayOneShot(somExplosao);
             Destroy(this.gameObject);

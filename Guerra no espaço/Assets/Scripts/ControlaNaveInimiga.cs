@@ -65,6 +65,7 @@ public class ControlaNaveInimiga : MonoBehaviour
             ControlaAudio.Instancia.PlayOneShot(somExplosao);
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
+            ControlaJogo.placar += 150;
         }
     }
 

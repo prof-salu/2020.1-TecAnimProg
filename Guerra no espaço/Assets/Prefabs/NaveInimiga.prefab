@@ -141,10 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faff9549bd62737489e7e65e33e416e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  somNaveInimiga: {fileID: 8300000, guid: 14d4e66570723844b8737d9575a2415d, type: 3}
   velRotacao: 90
   velDeslocamento: 3
   atrasoDisparo: 1
-  timerDisparo: 0
   distanciaDoTiro: 4
-  laser: {fileID: 1810078229652504649, guid: bdc55ab9445a630478e0a93984a88c14, type: 3}
+  laser: {fileID: 1810078229652504649, guid: fc7f939c0093d2f4394add5ef3f1d972, type: 3}
+  somExplosao: {fileID: 8300000, guid: 14d4e66570723844b8737d9575a2415d, type: 3}

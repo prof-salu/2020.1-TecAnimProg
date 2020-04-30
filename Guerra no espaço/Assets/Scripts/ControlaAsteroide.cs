@@ -7,11 +7,17 @@ public class ControlaAsteroide : MonoBehaviour
     public AudioClip somAsteroide;
     public float velDeslocamento = 5;
     public float velRotacao = 180;
+    private float limiteAsteroide = 0.5f;
+
+    private void Start()
+    {
+        transform.position = SortearPosicao();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log("Encostou no colisor");
-        if(collision.CompareTag("Laser"))
+        if(collision.CompareTag("LaserJogador"))
         {
             //Toca o som da explosão
             ControlaAudio.Instancia.PlayOneShot(somAsteroide);
@@ -19,6 +25,7 @@ public class ControlaAsteroide : MonoBehaviour
             Destroy(this.gameObject);
             //Destro o laser
             Destroy(collision.gameObject);
+            ControlaJogo.placar += 100;
         }
     }
         
@@ -44,5 +51,19 @@ public class ControlaAsteroide : MonoBehaviour
 
         transform.position = posicao;
 
+        if(posicao.y + 2 < -Camera.main.orthographicSize)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    private Vector3 SortearPosicao()
+    {
+        float proporcaoCena = (float) Screen.width / (float) Screen.height;
+        float larguraCamera = Camera.main.orthographicSize * proporcaoCena;
+
+        float x = Random.Range(-larguraCamera + limiteAsteroide, larguraCamera - limiteAsteroide);
+
+        return new Vector3(x, transform.position.y, transform.position.z);
     }
 }

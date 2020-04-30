@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class GeradorDeInimigos : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    private GameObject jogador;
+    public GameObject inimigo;
+    public float intervaloCriacao = 3f;
+    private float timerCriacao = 0;
     void Update()
     {
-        
+        if(jogador == null)
+        {
+            jogador = GameObject.FindWithTag("Player");
+        }
+
+        if(jogador == null)
+        {
+            return;
+        }
+
+        timerCriacao -= Time.deltaTime;
+
+        if(timerCriacao <= 0)
+        {
+            timerCriacao = intervaloCriacao;
+            Instantiate(inimigo, transform.position, transform.rotation);
+        }
     }
 }
