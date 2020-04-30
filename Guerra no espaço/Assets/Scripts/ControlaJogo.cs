@@ -44,17 +44,23 @@ public class ControlaJogo : MonoBehaviour
     {
         timerReaparecer = 1;
         jogador = (GameObject) Instantiate(jogadorPrefab, transform.position, transform.rotation);
-        //StartCoroutine(Invencibilidade());
+        StartCoroutine(Invencibilidade());
         vidas--;        
     }
 
     private IEnumerator Invencibilidade()
     {
-        //COroutinas
-        BoxCollider2D colisorNave = jogador.GetComponent<BoxCollider2D>();
-        colisorNave.enabled = false;
+        //rotinas
+        foreach(BoxCollider2D colisor in jogador.GetComponents<BoxCollider2D>())
+        {
+            colisor.enabled = false;
+        }
         yield return new WaitForSeconds(2f);
-        colisorNave.enabled = true;
+
+        foreach (BoxCollider2D colisor in jogador.GetComponents<BoxCollider2D>())
+        {
+            colisor.enabled = true;
+        }
     }
 
     private void OnGUI()
