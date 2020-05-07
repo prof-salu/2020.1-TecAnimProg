@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8233638246726749388}
   - component: {fileID: 8233638246726749391}
   - component: {fileID: 1274673567}
+  - component: {fileID: 1274673563}
   - component: {fileID: 8233638246726749390}
   - component: {fileID: 8233638246726749425}
-  - component: {fileID: 1274673563}
+  - component: {fileID: 114603678197220150}
   m_Layer: 0
   m_Name: NaveJogador
   m_TagString: Player
@@ -136,6 +137,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.24435174, y: 0.75}
   m_EdgeRadius: 0
+--- !u!50 &1274673563
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8233638246726749387}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &8233638246726749390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,25 +186,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laser: {fileID: 1810078229652504649, guid: bdc55ab9445a630478e0a93984a88c14, type: 3}
-  atrasoNoDisparo: 0.2
---- !u!50 &1274673563
-Rigidbody2D:
-  serializedVersion: 4
+  atrasoNoDisparo: 0.25
+--- !u!114 &114603678197220150
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8233638246726749387}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5c0f77f545c504e846fb2ac948ace0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerRecargaEscudo: 15
+  escudoPrefab: {fileID: 7273803838056464266, guid: 37381c6c54713ae43b2b1ffe50af3f9d,
+    type: 3}

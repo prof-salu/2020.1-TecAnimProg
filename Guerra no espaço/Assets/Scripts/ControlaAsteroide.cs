@@ -8,6 +8,7 @@ public class ControlaAsteroide : MonoBehaviour
     public float velDeslocamento = 5;
     public float velRotacao = 180;
     private float limiteAsteroide = 0.5f;
+    public GameObject powerupTiro;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class ControlaAsteroide : MonoBehaviour
         //Debug.Log("Encostou no colisor");
         if(collision.CompareTag("LaserJogador"))
         {
+            Instantiate(powerupTiro, transform.position, Quaternion.identity);
             //Toca o som da explosão
             ControlaAudio.Instancia.PlayOneShot(somAsteroide);
             //Destroi o asteroide

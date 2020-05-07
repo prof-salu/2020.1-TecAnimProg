@@ -154,3 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   somAsteroide: {fileID: 8300000, guid: f15f1fd66ea489b4796844277fdb2826, type: 3}
+  velDeslocamento: 3
+  velRotacao: 180
+  powerupTiro: {fileID: 2457370077981851489, guid: 3fbc5b3647be9a94d88a143b03ccb83a,
+    type: 3}
