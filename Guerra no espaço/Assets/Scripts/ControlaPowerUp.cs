@@ -35,8 +35,22 @@ public class ControlaPowerUp : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            jogador.GetComponent<ControlaDisparo>().atrasoNoDisparo -= 0.02f;
-            Destroy(this.gameObject);
+            if(gameObject.name == "PowerupVelocidade")
+            {
+                jogador.GetComponent<ControlaJogador>().velocidadeMax += 1;
+            }
+
+            if (gameObject.name == "PowerupTiro")
+            {
+                jogador.GetComponent<ControlaDisparo>().atrasoNoDisparo -= 0.5f;
+            }
+
+            if (gameObject.name == "PowerupEscudo")
+            {
+                jogador.GetComponent<AtivaEscudo>().timerRecargaEscudo -= 1.5f;
+            }
+
+            Destroy(transform.parent.gameObject);
         }
     }
 }

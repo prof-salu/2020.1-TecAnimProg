@@ -75,8 +75,8 @@ public class ControlaJogo : MonoBehaviour
             {   
                 //Quando a nave do jogador estiver ativa, exibe os valores atuais de cada propriedade
                 GUI.Label(new Rect(0, 40, 200, 50), "Atraso no disparo: " + jogador.GetComponent<ControlaDisparo>().atrasoNoDisparo);
-                GUI.Label(new Rect(0, 60, 200, 50), "Recarga Escudo: " + "0");
-                GUI.Label(new Rect(0, 80, 200, 50), "Velocidade Nave: " + "0");
+                GUI.Label(new Rect(0, 60, 200, 50), "Recarga Escudo: " + jogador.GetComponent<AtivaEscudo>().timerRecargaEscudo);
+                GUI.Label(new Rect(0, 80, 200, 50), "Velocidade Nave: " + jogador.GetComponent<ControlaJogador>().velocidadeMax);
             }else
             {
                 //Quando a nave do jogador não está na cena exibe os valores zerados

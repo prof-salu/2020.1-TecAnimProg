@@ -125,7 +125,7 @@ GameObject:
   m_Layer: 0
   m_Name: Gerador de inimigos 03
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -252,7 +252,7 @@ GameObject:
   m_Layer: 0
   m_Name: Gerador de inimigos 01
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inimigo: {fileID: 5139770076079941265, guid: cd11003c72f1abc41beaa10e0d2a686a, type: 3}
-  intervaloCriacao: 3
+  intervaloCriacao: 0.5
 --- !u!4 &652985281
 Transform:
   m_ObjectHideFlags: 0
@@ -437,10 +437,10 @@ GameObject:
   m_Layer: 0
   m_Name: Gerador de inimigos 02
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1250871059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,6 +500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jogadorPrefab: {fileID: 8233638246726749387, guid: 2aa14b2c74fd14c4f94809379384aa93,
     type: 3}
+  vidas: 0
 --- !u!4 &1890430438
 Transform:
   m_ObjectHideFlags: 0
