@@ -7,10 +7,12 @@ public class Aviao : MonoBehaviour
     [SerializeField] private float impulso = 6;
     [SerializeField] private ControlaJogo controlaJogo;
     private Rigidbody2D rigidbody;
+    private Vector3 posicaoInicial;
 
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        posicaoInicial = transform.position;
     }
 
     private void Update()
@@ -29,6 +31,13 @@ public class Aviao : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        rigidbody.simulated = false;
         controlaJogo.FinalizarJogo();
+    }
+
+    public void Reiniciar()
+    {
+        transform.position = posicaoInicial;
+        rigidbody.simulated = true;
     }
 }
